@@ -30,6 +30,8 @@ func (bc *BlockChain) AppendBlock(newBlock *Block) {
 	}
 }
 
+/**
+ */
 func (bc *BlockChain) SendData(data string) {
 	preBlock := bc.Blocks[len(bc.Blocks)-1] //父区块
 	newBlock := GenerateNewBlock(*preBlock, data)
