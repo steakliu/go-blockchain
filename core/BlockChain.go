@@ -38,7 +38,9 @@ func (bc *BlockChain) SendData(data string) {
 	bc.AppendBlock(&newBlock)
 }
 
-//校验添加的区块是否合法
+/**
+校验添加的区块是否合法
+*/
 func isValid(newBlock Block, oldBlock Block) bool {
 	if newBlock.Index-1 != oldBlock.Index {
 		return false
